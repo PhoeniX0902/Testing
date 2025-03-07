@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Up Payment</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <!-- Header with Netflix logo and Sign Out link -->
+    <header>
+        <img src="assets/pics/logo.png" alt="Netflix Logo" class="logo">
+        <a href="front.html" class="signout">Sign Out</a>
+    </header>
+
+    <div class="payment-container">
+        <h3 class="step">STEP 4 OF 4</h3>
+        <h1>Set up your credit or debit card</h1>
+
+        <form id="paymentForm">
+            <div class="card-details">
+                <input type="text" id="cardNumber" placeholder="Card Number (e.g. 1234 5678 9876 5432)" pattern="\d{4} \d{4} \d{4} \d{4}" required>
+                <div class="card-info">
+                    <input type="text" id="expiryDate" placeholder="MM/YY" pattern="\d{2}/\d{2}" required>
+                    <input type="text" id="cvv" placeholder="CVV (3 digits)" pattern="\d{3}" required>
+                </div>
+                <input type="text" id="nameOnCard" placeholder="Name on Card" required>
+            </div>
+
+            <div class="plan-info">
+                <span id="planName">Mobile Plan</span> - <span id="planPrice">₹199/month</span>
+                <a href="plan.html">Change</a>
+            </div>
+
+            <p class="disclaimer">
+                Any payment above ₹2000 shall need additional authentication.
+            </p>
+            <p class="terms">
+                By checking the checkbox below, you agree to our 
+                <a href="#">Terms of Use</a>, <a href="#">Privacy Statement</a>, and that you are over 18.
+            </p>
+
+            <label class="checkbox-container">
+                <input type="checkbox" required>
+                <span class="checkmark"></span> I agree.
+            </label>
+
+            <button type="submit">Start Membership</button>
+        </form>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

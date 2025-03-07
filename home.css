@@ -1,0 +1,356 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #141414;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li {
+    cursor: pointer;
+    font-weight: 500;
+    color: #e5e5e5;
+    font-size: 0.95em;
+}
+
+.nav-links li:hover {
+    color: #fff;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #e5e5e5;
+}
+
+/* Search container styling */
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    cursor: pointer;
+    width: 20px; /* Adjust width of the icon */
+    height: 20px; /* Adjust height of the icon */
+    transition: transform 0.2s ease;
+}
+
+.search-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.search-input {
+    display: none;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    margin-left: 10px;
+}
+
+.search-input.active {
+    display: inline-block;
+}
+
+/* Notification bell icon */
+.notification-icon {
+    cursor: pointer;
+    width: 20px; /* Adjust width of the icon */
+    height: 20px; /* Adjust height of the icon */
+    transition: transform 0.2s ease;
+}
+
+.notification-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Sign Out button */
+.signout-btn {
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signout-btn:hover {
+    background-color: #b20710;
+}
+
+/* Carousel Section */
+.carousel {
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.carousel h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Arrow Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #141414;
+}
+
+/* Carousel Row */
+.carousel-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.carousel-row::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/* Card Styling */
+.card {
+    min-width: 200px;
+    height: 120px;
+    background-color: #333;
+    border-radius: 8px;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the whole card area */
+    transition: transform 0.3s ease;
+}
+
+.card:hover .thumbnail {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Recently Added Tag */
+.card::after {
+    content: "Recently added";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: red;
+    color: white;
+    font-size: 0.7em;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .carousel h2 {
+        font-size: 1.3em;
+    }
+
+    .card {
+        min-width: 150px;
+        height: 100px;
+        font-size: 1em;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .scroll-btn {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+
+/* Modal for video playback */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#video-player {
+    width: 100%;
+    height: 400px;
+}
+
+/* Show modal */
+.modal.active {
+    display: flex;
+}
+.search-results {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none; /* It should be set to block when active */
+}
+
+.search-results div {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-results div:hover {
+    background-color: #555;
+}
+
+.search-input.active + .search-results {
+    display: block;
+}
+/* Video Modal Styles */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.video-modal.active {
+    display: flex;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#video-player {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+.hidden {
+    display: none;
+}
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+.no-results {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}

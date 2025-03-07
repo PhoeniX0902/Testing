@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Style Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <p class="step">STEP 1 OF 4</p>
+        </div>
+        <div class="signup-container">
+            <div class="signup-header">
+                <img src="assets/pics/logo.png" alt="Netflix Logo" class="logo">
+            </div>
+            <div class="signup-content">
+                <h1>Create a password to start your membership</h1>
+                <p>Just a few more steps and you're done! We hate paperwork too.</p>
+                <form id="signupForm">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Add a password" required
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" 
+                    title="Password must be at least 8 characters long and contain both letters and numbers.">
+                    <button type="submit">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script> <!-- Ensure this file path is correct -->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Selection</title>
+  <link rel="stylesheet" href="plan.css">
+</head>
+<body>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="logo">
+    <a href="front.html" class="sign-out">Sign Out</a>
+  </header>
+
+  <div class="container">
+    <p class="step">STEP <strong>3</strong> OF <strong>4</strong></p>
+    <h1>Choose the plan that's right for you</h1>
+
+    <div class="plans">
+      <div class="plan mobile" onclick="selectPlan(this)">
+        <div class="header">Mobile <span>480p</span></div>
+        <p class="price">₹149</p>
+        <div class="feature">Video and sound quality: <strong>Fair</strong></div>
+        <div class="feature">Resolution: 480p</div>
+        <div class="feature">Supported devices: <strong>Mobile phone, tablet</strong></div>
+        <div class="feature">Devices your household can watch at the same time: 1</div>
+        <div class="feature">Download devices: 1</div>
+      </div>
+
+      <div class="plan basic highlight selected" onclick="selectPlan(this)">
+        <div class="most-popular">Most Popular</div>
+        <div class="header">Basic <span>720p</span></div>
+        <p class="price">₹199</p>
+        <div class="feature">Video and sound quality: <strong>Good</strong></div>
+        <div class="feature">Resolution: 720p (HD)</div>
+        <div class="feature">Supported devices: <strong>TV, computer, mobile phone, tablet</strong></div>
+        <div class="feature">Devices your household can watch at the same time: 1</div>
+        <div class="feature">Download devices: 1</div>
+      </div>
+
+      <div class="plan standard" onclick="selectPlan(this)">
+        <div class="header">Standard <span>1080p</span></div>
+        <p class="price">₹499</p>
+        <div class="feature">Video and sound quality: <strong>Great</strong></div>
+        <div class="feature">Resolution: 1080p (Full HD)</div>
+        <div class="feature">Supported devices: <strong>TV, computer, mobile phone, tablet</strong></div>
+        <div class="feature">Devices your household can watch at the same time: 2</div>
+        <div class="feature">Download devices: 2</div>
+      </div>
+
+      <div class="plan premium" onclick="selectPlan(this)">
+        <div class="header">Premium <span>4K + HDR</span></div>
+        <p class="price">₹649</p>
+        <div class="feature">Video and sound quality: <strong>Best</strong></div>
+        <div class="feature">Resolution: 4K (Ultra HD) + HDR</div>
+        <div class="feature">Spatial audio: Included</div>
+        <div class="feature">Supported devices: <strong>TV, computer, mobile phone, tablet</strong></div>
+        <div class="feature">Devices your household can watch at the same time: 4</div>
+        <div class="feature">Download devices: 6</div>
+      </div>
+    </div>
+
+    <!-- Add Next Button -->
+    <button class="next-btn" onclick="goToNextPage()">Next</button>
+  </div>
+
+  <script src="plan.js"></script>
+</body>
+</html>

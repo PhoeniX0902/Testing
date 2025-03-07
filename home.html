@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Style Layout</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="assets/pics/logo.png" alt="Netflix Logo" class="logo">
+            <ul class="nav-links">
+                <li>Home</li>
+                <li>TV Shows</li>
+                <li>Movies</li>
+                <li>New & Popular</li>
+                <li>My List</li>
+                <li>Browse by Languages</li>
+            </ul>
+            <div class="nav-icons">
+                <div class="search-container">
+                    <img src="assets/pics/search.png" alt="Search" id="search-icon" class="search-icon">
+                    <input type="text" id="search-input" placeholder="Search for a title..." class="search-input">
+                    <div id="search-results" class="search-results"></div>
+                </div>
+                <span>Children</span>
+                <img src="assets/pics/noti.png" alt="Notifications" id="notification-icon" class="notification-icon">
+                <button class="signout-btn" onclick="signOut()">Sign Out</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="carousel">
+            <h2>Popular TV Shows</h2>
+            <div class="carousel-container">
+                <button class="scroll-btn left" onclick="scrollLeft(this)">&#10094;</button>
+                <div class="carousel-row" id="carousel-row">
+                    <div class="card" data-title="Suits" data-video="https://drive.google.com/file/d/1s1u2lvsU6ArTqe1yQcbqL1Yr9uewi8Nw/preview">
+                        <img src="assets/pics/Suits.jpg" alt="Suits" class="thumbnail">
+                    </div>
+                    <div class="card" data-title="Money Heist" data-video="https://drive.google.com/file/d/1WUxhF-wkwJgZTjRQazweZk0Vo-NexkvN/preview">
+                        <img src="assets/pics/money.jpg" alt="Money Heist" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Penguin" data-video="https://drive.google.com/file/d/15OYcbgFiXaqRPTjulLal8RYznFMNVyzV/preview">
+                        <img src="https://bellmedia-images.imgix.net/lede/wp-content/uploads/2024/06/SCRID-1706763617067673_ThePenguinTeaseVersionBS1_3840x2160_LAN-en-US_PUR-tileburnedin.jpg?auto=format&crop=faces%2C%20edges&ar=16%3A9&fit=crop&ixlib=react-9.8.1&q=60&w=1400&dpr=2" alt="The Penguin" class="thumbnail">
+                    
+                    </div>
+                    <div class="card" data-title="Kota Factory" data-video="https://drive.google.com/file/d/1x24vmyfBo52adCrUVhbaNxyiK_oset61/preview">
+                        <img src="assets/pics/Kota.jpeg" alt="Kota Factory" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Friends" data-video="assets/video/Friends.mp4">
+                        <img src="assets/pics/friends.jpg" alt="Friends" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Strangers Things " data-video="https://www.youtube.com/embed/qSEeQXzFspk?si=-Xz7CQ9tJrDUOhYi">
+                        <img src="assets/pics/str.jpg" alt="Strangers Things" class="thumbnail">
+                    
+                    </div>
+                    <div class="card" data-title="Titans " data-video="https://www.youtube.com/embed/iH44Z0QwrWQ?si=89ADmJ8V5i1cR0hg">
+                        <img src="assets/pics/titans.jpeg" alt="Titans" class="thumbnail">
+                    
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollRight(this)">&#10095;</button>
+            </div>
+        </div>
+        <div class="carousel">
+            <h2>Thriller </h2>
+            <div class="carousel-container">
+                <button class="scroll-btn left" onclick="scrollLeft(this)">&#10094;</button>
+                <div class="carousel-row" id="carousel-row">
+                    
+                    <div class="card" data-title="Carry On" data-video="https://www.youtube.com/embed/KS0XacjMmOc?si=33qBX3D4AjwsuYsg?autoplay=1">
+                        <img src="assets/pics/carry.jpg" alt="Money Heist" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="No Exit " data-video="https://www.youtube.com/embed/GFvupyiNEz0?si=5ohHcYo2jBmPJfFS">
+                        <img src="https://onetakenews.com/wp-content/uploads/2022/02/no-exit-poster-2-1-e1645203912981.webp" alt="No Exit" class="thumbnail">
+                    
+                    </div>
+                    <div class="card" data-title="Back in Action " data-video="https://www.youtube.com/embed/BLjvq2mlxBw?si=3HtoNqUkgplhvcgK">
+                        <img src="assets/pics/back.jpg" alt="Back in Action" class="thumbnail">
+                    
+                    </div>
+                    <div class="card" data-title="Sector 36" data-video="https://www.youtube.com/embed/eES65pr2POM?si=uRp4KSt5lUt-fmF8">
+                        <img src="assets/pics/sector.jpg" alt="Sector 36" class="thumbnail">
+                    
+                    </div>
+                    <div class="card" data-title="The Black Phone " data-video="https://www.youtube.com/embed/3eGP6im8AZA?si=rj0efa89VP_gV8N3">
+                        <img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/11/the-black-phone-what-we-know.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="The Black Phone" class="thumbnail">
+                    
+                    </div>
+                    <div class="card" data-title="HIT THE FIRST CASE " data-video="https://www.youtube.com/embed/YqX0jaXDABM?si=HQLtLDd0TSfSGgWy">
+                        <img src="assets/pics/Hit.jpg" alt="HIT THE FIRST CASE" class="thumbnail">
+                    
+                    </div>
+                    <div class="card" data-title="Strangers Things " data-video="https://www.youtube.com/embed/qSEeQXzFspk?si=-Xz7CQ9tJrDUOhYi">
+                        <img src="assets/pics/str.jpg" alt="Strangers Things" class="thumbnail">
+                    
+                    </div>
+                    <div class="card" data-title="Wednesday " data-video="https://www.youtube.com/embed/Di310WS8zLk?si=CTxXcEcQ4MgHTfYM">
+                        <img src="assets/pics/wed.jpeg" alt="Wednesday" class="thumbnail">
+                    
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollRight(this)">&#10095;</button>
+            </div>
+        </div>
+        <div class="carousel">
+            <h2>Comedy </h2>
+            <div class="carousel-container">
+                <button class="scroll-btn left" onclick="scrollLeft(this)">&#10094;</button>
+                <div class="carousel-row" id="carousel-row">
+                    
+                    <div class="card" data-title="Man Vs Bee" data-video="https://www.youtube.com/embed/YQ1vN_91KO0?si=VRIJ0UJr727Patu0">
+                        <img src="assets/pics/man.jpg" alt="Man Vs Bee" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Friends" data-video="assets/video/Friends.mp4">
+                        <img src="assets/pics/friends.jpg" alt="Friends" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Vijay 69" data-video="https://www.youtube.com/embed/72LxV6ydjcg?si=VUVxgxFLc1vnBHmO">
+                        <img src="assets/pics/vij.jpg" alt="Vijay 69" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Wild Wild Punjab" data-video="https://www.youtube.com/embed/CIrK-7VDkbU?si=d89qlusow3ILtGeV">
+                        <img src="assets/pics/wild.jpg" alt="Wild Wild Punjab" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Red One " data-video="https://www.youtube.com/embed/7l3hfD74X-4?si=QxUw5Dbxf8oJd21_">
+                        <img src="assets/pics/red.jpg" alt="Red One " class="thumbnail">
+                        
+                    </div>
+                    
+                </div>
+                <button class="scroll-btn right" onclick="scrollRight(this)">&#10095;</button>
+            </div>
+        </div>
+        <div class="carousel">
+            <h2>Drama </h2>
+            <div class="carousel-container">
+                <button class="scroll-btn left" onclick="scrollLeft(this)">&#10094;</button>
+                <div class="carousel-row" id="carousel-row">
+                    
+                    <div class="card" data-title="Kota Factory" data-video="https://drive.google.com/file/d/1x24vmyfBo52adCrUVhbaNxyiK_oset61/preview">
+                        <img src="assets/pics/Kota.jpeg" alt="Kota Factory" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Friends" data-video="assets/video/Friends.mp4">
+                        <img src="assets/pics/friends.jpg" alt="Friends" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Suits" data-video="https://drive.google.com/file/d/1s1u2lvsU6ArTqe1yQcbqL1Yr9uewi8Nw/preview">
+                        <img src="assets/pics/Suits.jpg" alt="Suits" class="thumbnail">
+                    </div>
+                    <div class="card" data-title="Man Vs Bee" data-video="https://www.youtube.com/embed/YQ1vN_91KO0?si=VRIJ0UJr727Patu0">
+                        <img src="assets/pics/man.jpg" alt="Man Vs Bee" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Wild Wild Punjab" data-video="https://www.youtube.com/embed/CIrK-7VDkbU?si=d89qlusow3ILtGeV">
+                        <img src="assets/pics/wild.jpg" alt="Wild Wild Punjab" class="thumbnail">
+                        
+                    </div>
+                    <div class="card" data-title="Penguin" data-video="https://drive.google.com/file/d/15OYcbgFiXaqRPTjulLal8RYznFMNVyzV/preview">
+                        <img src="https://bellmedia-images.imgix.net/lede/wp-content/uploads/2024/06/SCRID-1706763617067673_ThePenguinTeaseVersionBS1_3840x2160_LAN-en-US_PUR-tileburnedin.jpg?auto=format&crop=faces%2C%20edges&ar=16%3A9&fit=crop&ixlib=react-9.8.1&q=60&w=1400&dpr=2" alt="The Penguin" class="thumbnail">
+                    
+                    </div>
+                    
+                </div>
+                <button class="scroll-btn right" onclick="scrollRight(this)">&#10095;</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Video Playback -->
+<div class="modal" id="video-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <!-- Embed iframe to display video -->
+        <iframe id="video-frame" width="100%" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+</div>
+    
+
+    <script src="home.js"></script>
+</body>
+</html>

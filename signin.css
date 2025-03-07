@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('assets/pics/1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.background-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-container {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    width: 350px;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.logo {
+    width: 120px; /* Adjust width as necessary */
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #333;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #E50914;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #f40612;
+}
+
+.or {
+    color: #b3b3b3;
+    margin: 20px 0;
+}
+
+.signin-code {
+    background-color: transparent;
+    border: 1px solid #b3b3b3;
+}
+
+.forgot-password, .new-to-netflix a, .recaptcha-disclaimer a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover, .new-to-netflix a:hover, .recaptcha-disclaimer a:hover {
+    text-decoration: underline;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.new-to-netflix {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+.recaptcha-disclaimer {
+    font-size: 0.7rem;
+    color: #8c8c8c;
+    margin-top: 15px;
+}

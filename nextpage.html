@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+</head>
+<body>
+    <h1>Welcome to the Next Page!</h1>
+    <p>Your email and password have been saved locally:</p>
+    <p>Email: <span id="savedEmail"></span></p>
+    <p>Password: <span id="savedPassword"></span></p>
+
+    <script>
+        // Retrieve email and password from Local Storage
+        const email = localStorage.getItem('userEmail');
+        const password = localStorage.getItem('userPassword');
+
+        // Display saved data
+        document.getElementById('savedEmail').textContent = email ? email : 'Not available';
+        document.getElementById('savedPassword').textContent = password ? password : 'Not available';
+    </script>
+</body>
+</html>
